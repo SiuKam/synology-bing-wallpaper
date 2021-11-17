@@ -20,4 +20,5 @@ sed -i s/login_welcome_title=.*//g /etc/synoinfo.conf
 echo "login_welcome_title=\"$line_1\"">>/etc/synoinfo.conf
 sed -i s/login_welcome_msg=.*//g /etc/synoinfo.conf
 echo "login_welcome_msg=\"$line_2\"">>/etc/synoinfo.conf
+# DO remember to change the username
 cp -f $savefile /usr/syno/etc/preference/gan/wallpaper
