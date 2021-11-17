@@ -1,0 +1,1 @@
+D:/OneDrive - ganzhaozhuo/文档/synology_bing_wallpaper.sh
