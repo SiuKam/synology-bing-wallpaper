@@ -1,7 +1,7 @@
 # saving location
 savepath="/volume1/download/wallpaper"
 # using api provided by atlinker.cn
-pic_info=$(wget -t 5 --no-check-certificate -qO- "https://fly.atlinker.cn/api/bing/cn.php")
+pic_info=$(wget -t 5 --no-check-certificate -qO- "https://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1")
 pic_url=$(echo https://www.bing.com$(echo $pic_info|sed 's/.\+"url"[:" ]\+//g'|sed 's/".\+//g'))
 date=$(echo $pic_info|sed 's/.\+enddate[": ]\+//g'|grep -Eo 2[0-9]{7}|head -1)
 savefile=$savepath/$date"_bing.jpg"
