@@ -20,3 +20,4 @@ sed -i s/login_welcome_msg=.*//g /etc/synoinfo.conf
 echo "login_welcome_msg=\"$copyright\"">>/etc/synoinfo.conf
 # DO remember to change the username
 cp -f $savefile /usr/syno/synoman/webman/resources/images/2x/default_wallpaper/dsm7_01.jpg
+ln -sf /usr/syno/synoman/webman/resources/images/2x/default_wallpaper/dsm7_01.jpg /usr/syno/synoman/webman/resources/images/1x/default_wallpaper/dsm7_01.jpg
