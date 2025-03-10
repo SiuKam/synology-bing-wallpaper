@@ -1,7 +1,7 @@
 # saving location
 savepath="/volume1/download/wallpaper"
 # using api provided by cn.bing.com
-pic_info=$(wget -t 5 --no-check-certificate -qO- "https://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&uhd=1&uhdwidth=3840&uhdheight=2160")
+pic_info=$(wget -t 5 --no-check-certificate -qO- "https://bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&uhd=1&uhdwidth=3840&uhdheight=2160")
 pic_url=$(echo https://www.cn.bing.com$(echo $pic_info|sed 's/.\+"url"[:" ]\+//g'|sed 's/".\+//g'))
 date=$(echo $pic_info|sed 's/.\+enddate[": ]\+//g'|grep -Eo 2[0-9]{7}|head -1)
 savefile=$savepath/$date"_bing.jpg"
